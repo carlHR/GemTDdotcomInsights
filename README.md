@@ -20,6 +20,8 @@ DifficultyMod is:
    - Extreme:   8
    - Survival: 16
 
+
+
 Simple Score calculator from level, assuming that you beated all enemies
 during all waves and never took any damage. Open your browser console, and
 type this in:
@@ -45,22 +47,23 @@ would be to host the game ON THE SERVER. But realistically, who cares right.
 
 Gem quality chances are divided into: Chipped, Flawed, Normal, Flawless, 
 Perfect, and Gold Upgrade to next step.
-
-1. 100%,  0%,  0%,  0%,  0%,  20gp
-2.  70%, 30%,  0%,  0%,  0%,  50gp
-3.  60%, 30%, 10%,  0%,  0%,  80gp
-4.  50%, 30%, 20%,  0%,  0%, 110gp
-5.  40%, 30%, 20%, 10%,  0%, 140gp
-6.  30%, 30%, 30%, 10%,  0%, 170gp
-7.  20%, 30%, 30%, 20%,  0%, 200gp
-8.  10%, 30%, 30%, 30%,  0%, 230gp
-9.   0%, 30%, 30%, 30%, 10%, -----
+   1. 100%,  0%,  0%,  0%,  0%,  20gp
+   2.  70%, 30%,  0%,  0%,  0%,  50gp
+   3.  60%, 30%, 10%,  0%,  0%,  80gp
+   4.  50%, 30%, 20%,  0%,  0%, 110gp
+   5.  40%, 30%, 20%, 10%,  0%, 140gp
+   6.  30%, 30%, 30%, 10%,  0%, 170gp
+   7.  20%, 30%, 30%, 20%,  0%, 200gp
+   8.  10%, 30%, 30%, 30%,  0%, 230gp
+   9.   0%, 30%, 30%, 30%, 10%, -----
 
 --------------------------------------------------------------------------------
 # Gems
 
 Status are categorized by tower quality: Chipped to Great;
 Status are separated by Damage, Cooldown, Range, Info.
+
+
 
 Amethyst (Magenta)
    1. (  8 -  13);  800; 143; Attacks air only;
@@ -70,6 +73,8 @@ Amethyst (Magenta)
    5. (139 - 150); 1000; 215; Attacks air only;
    6. (349 - 400); 1000; 236; Attacks air only;
 
+
+
 Aquamarine (Cyan)
    1. (  5 -   8); 350; 50; Fast attack speed;
    2. ( 11 -  15); 350; 52; Fast attack speed;
@@ -78,6 +83,8 @@ Aquamarine (Cyan)
    5. ( 99 - 120); 350; 79; Fast attack speed;
    6. (279 - 280); 350; 86; Fast attack speed;
 
+
+
 Diamond (White)
    1. (  7 -  12);  800;  72; Ground only. Has 25% chance to deal 2x damage;
    2. ( 15 -  18); 1000;  79; Ground only. Has 25% chance to deal 2x damage;
@@ -85,6 +92,8 @@ Diamond (White)
    4. ( 57 -  65); 1000;  93; Ground only. Has 25% chance to deal 2x damage;
    5. (139 - 150); 1000; 107; Ground only. Has 25% chance to deal 2x damage;
    6. (299 - 350); 1000; 122; Ground only. Has 25% chance to deal 2x damage;
+
+
 
 Emerald (Green)
    1. (  3 -   7); 1000;  72; Applies effects for 3s: 15% slow, 2 poison dmg/s;
@@ -95,6 +104,8 @@ Emerald (Green)
    6. (199 - 240); 1000; 129; Applies effects for 20s: 75% slow, 
       25 poison dmg/s;
 
+
+
 Opal (Dark)
    1. (  4 -   5);  800;  86; Attack speed aura +10%. Effect doesn't stack;
    2. (  9 -  10); 1000; 100; Attack speed aura +15%. Effect doesn't stack;
@@ -102,6 +113,8 @@ Opal (Dark)
    4. ( 39 -  40); 1000; 129; Attack speed aura +25%. Effect doesn't stack;
    5. ( 84 -  85); 1000; 143; Attack speed aura +35%. Effect doesn't stack;
    6. (179 - 180); 1000; 215; Attack speed aura +50%. Effect doesn't stack;
+
+
 
 Ruby (Red)
    1. (  7 -   9); 1000; 114; Attacks cause splash damage;
@@ -111,6 +124,8 @@ Ruby (Red)
    5. ( 79 - 104); 1000; 129; Attacks cause splash damage;
    6. (139 - 140);  750; 129; Attacks cause splash damage;
 
+
+
 Sapphire (Blue)
    1. (  4 -   8); 1000;  72; Attacks slow target's movement speed;
    2. (  9 -  13); 1000; 107; Attacks slow target's movement speed;
@@ -118,6 +133,8 @@ Sapphire (Blue)
    4. ( 29 -  40); 1000; 122; Attacks slow target's movement speed;
    5. ( 59 -  75); 1000; 200; Attacks slow target's movement speed;
    6. (199 - 200); 1000; 286; Attacks slow target's movement speed;
+
+
 
 Topaz (Yellow)
    1. (  3 -   4);  800;  72; Attacks 3 targets;
@@ -135,10 +152,14 @@ Each tower status is divided into: Damage, Attack Speed, Range, Upgrade Cost,
 Effect Description.
 Each number corresponds to the tower upgrade level in sequence.
 
+
+
 Malachite: (Chipped:Opal + Chipped:Aquamarine + Chipped:Emerald)
    1. ( 5 -  6); 350; 107; 25gp; Attack 3x targets;
    2. (10 - 11); 350; 114; 280gp; Attack 4x targets;
    3. (44 - 45); 350; 114; -----; Attack all targets;
+
+
 
 Silver: (Chipped:Topaz + Chipped:Sapphire + Chipped:Diamond)
    1. ( 19 -  21); 1000; 79; 25gp; Silver attacks slow targets with splash area;
@@ -146,6 +167,8 @@ Silver: (Chipped:Topaz + Chipped:Sapphire + Chipped:Diamond)
       splash area;
    3. (149 - 150); 1000; 107; Silver Knight attacks slow targets with splash 
       area;
+
+
 
 StarRuby: (Chipped:Amethyst + Chipped:Ruby + Flawed:Ruby)
    1. ( 10 - 11); 250; 38; 30gp; Any enemy within 37.895 range will receive 
@@ -155,11 +178,15 @@ StarRuby: (Chipped:Amethyst + Chipped:Ruby + Flawed:Ruby)
    3. ( 64 - 65); 500; 86; -----; Any enemy within 85.800 range will receive 
       100 dmg/s.
 
+
+
 PinkDiamond: (Perfect:Diamond + Normal:Diamond + Normal:Topaz)
    1. (149 - 175); 750; 114; 175gp; Attacks ground only. Has 10% chance to
       deal 5x damage. 
    2. (174 - 195); 650; 122; -----; Attacks ground only. Has 10% chance to
       deal 8x damage.
+
+
 
 Jade: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
    1. (29 - 35); 500; 114;  45gp; Applies effects for 2s: Slow 50%, 5 poison
@@ -170,6 +197,8 @@ Jade: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
       dmg/s. 5% chance to deal 4x damage. 1% chance to stun. 5% chance to gain 
       gold on hit.
 
+
+
 RedCrystal: (Flawless:Emerald + Normal:Ruby + Flawed:Amethyst)
    1. (49 -  75); 800; 186; 100gp; Gives -4 armour to air units within large 
       area. Can only attack air units.
@@ -178,11 +207,15 @@ RedCrystal: (Flawless:Emerald + Normal:Ruby + Flawed:Amethyst)
    3. (99 - 125); 800; 215; -----; Gives -6 armour to air units within large 
       area. Can only attack air units.
 
+
+
 Gold: (Perfect:Amethyst + Flawless:Amethyst + Flawed:Diamond)
    1. (159 - 190); 1000; 114; 210gp; 25% chance to deal 2x damage. Applies -5 
       armour to targets it attacks;
    2. (159 - 200);  750; 114; -----; 30% chance to deal 2x damage. Applies -8 
       armour to targets it attacks;
+
+
 
 ParaibaTourmaline: (Perfect:Aqua + Flawless:Opal + Flawed:Emerald + Flawed:Aqua)
    1. (25 - 105); 850; 112; 350gp; Gives -4 armour to ground units within 86 
@@ -190,11 +223,15 @@ ParaibaTourmaline: (Perfect:Aqua + Flawless:Opal + Flawed:Emerald + Flawed:Aqua)
    2. (125 - 204); 680; 129; -----; Gives -6 armour to ground units within 93 
       range; Has 33% chance to cast 125 damage frost nova.
 
+
+
 BlackOpal: (Perfect:Opal + Flawless:Diamond + Normal:Aquamarine)
    1. (24 - 25); 1000; 114; 300gp; Gives 30% more damage to towers within 143 
       range;
    2. (49 - 50); 1000; 143; -----; Gives 40% more damage to towers within 171 
       range;
+
+
 
 DarkEmerald: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
    1. (89 - 150); 800; 79; 250gp; Has 12.5% chance to stun for 1 second per 
@@ -202,17 +239,23 @@ DarkEmerald: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
    2. (98 - 200); 700; 100; -----; Has 15.0% chance to stun for 2 seconds per 
       attack;
 
+
+
 Uranium-235: (Perfect:Topaz + Normal:Sapphire + Flawed:Opal)
    1. (47 - 48); 250; 64; 190gp; Slows all targets by 50%. Burn enemies for 190 
       dmg/s.
    2. (64 - 65); 250; 86; -----; Slows all targets by 50%. Burn enemies for 260 
       dmg/s.
 
+
+
 YellowSapphire: (Perfect:Sapphire + Flawless:Topaz + Flawless:Ruby)
    1. (99 - 100); 1000; 114; 210gp; Attacks slow targets within a huge splash
       area.
    2. (99 - 100); 1000; 114; -----gp; Attacks slow targets within a huge splash
       area. Provides 5% damage bonus to nearby towers.
+
+
 
 BloodStone: (Perfect:Ruby + Flawless:Aquamarine + Normal:Ruby)
    1. ( 67 -  68); 500; 100; 310gp; Attacks 10 targets. Does 135 damage per
@@ -221,6 +264,8 @@ BloodStone: (Perfect:Ruby + Flawless:Aquamarine + Normal:Ruby)
    mana points, and restores 2 mp/s. Has 10% chance to cast Flame Strike spell,
    which costs 5 mp. It lasts 10s, dealing 100 damage each second (that's
    what the script does, at least).
+
+
 
 UberStone: 4x Perfect Gems of same type
    1. (500 - 2500); 500; 215; -----; Has 25% chance to deal 4x damage. Only the 
@@ -235,12 +280,18 @@ subsequent wave.
 Enemies rewards start at 1.25gp, and at each wave, the reward increases by 
 +0.25gp.
 
+
+
 Information below was extracted from the game's source code. 
 It was too complex to make it by experimentation.
+
+
 
 For better reading, either resize the page to contain the full info, or, copy
 and paste the entire text into a text-editor of preference (ftlog, not Word).
 Disable wrap mode. Have fun.
+
+
 
 Enemy Status (All Difficulty Modes):
    1.  Axedwarf; Topaz;         10 hp;  0 armour; 100.00% speed;  1.25 gold; 
@@ -294,7 +345,10 @@ Enemy Status (All Difficulty Modes):
    49. Axedwarf; Emerald;    35000 hp; 15 armour; 150.94% speed; 20.00 gold;
    50. Axedwarf; Emerald;    40000 hp; 15 armour; 150.94% speed; 20.00 gold;
 
+
+
 Extreme Difficulty Changes:
+   1. (Just to make a list. Markdown requires to insert 1.)
    11. Axedwarf;   600 hp;
    12. Batman;           ;
    13. Axedwarf;   700 hp;
@@ -326,7 +380,10 @@ Extreme Difficulty Changes:
    39. Axedwarf; 25000 hp; 184.91% speed; 135.85% min-speed;
    40. Batman;             128.30% speed;  83.02% min-speed; for some reason, this wave is easier on this difficulty.
 
+
+
 Survival Difficulty Changes:
+   1. (Just to make a list. Markdown requires to insert 1.)
    11. Axedwarf;   650 hp;
    12. Batman;     550 hp;
    13. Axedwarf;   800 hp;
@@ -377,10 +434,14 @@ Survival Difficulty Changes:
 I mean, this is not written anywhere afaik, besides by carefully reading the 
 source code. So, I'll document it here.
 
+
+
 How RNG works?
    - Read about `xorshift`. I did had my doubts about this... Yes, some of you 
      might be cheating with this one! Just set a known seed and voila! Its not
      random anymore.
+
+
 
 How Armor and Damage calculation actually works?
    - First, the game ONLY IMPLEMENTS AMETHYST weakness. Yes, its described that 
@@ -412,6 +473,8 @@ How Armor and Damage calculation actually works?
      displayed on red, is the real damage being dealt to the enemy.
    - The steps to calculate damage are:
       - `(BaseDamage x {WeaknessModifier} x {ArmorModifier} x {TowerLevel}) x {AuraDamageModifier} x {CritDamageModifier}.`
+
+
 
 What are the gem-types of each tower, to counter enemies weaknesses?
    - Gold:                   Amethyst    <-- end game towers
