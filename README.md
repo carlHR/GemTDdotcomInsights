@@ -21,7 +21,7 @@ DifficultyMod is:
    - Survival: 16
 
 
-
+<br>
 Simple Score calculator from level, assuming that you beated all enemies
 during all waves and never took any damage. Open your browser console, and
 type this in:
@@ -64,7 +64,7 @@ Status are categorized by tower quality: Chipped to Great;
 Status are separated by Damage, Cooldown, Range, Info.
 
 
-
+<br>
 Amethyst (Magenta)
    1. (  8 -  13);  800; 143; Attacks air only;
    2. ( 17 -  25); 1000; 161; Attacks air only;
@@ -74,7 +74,7 @@ Amethyst (Magenta)
    6. (349 - 400); 1000; 236; Attacks air only;
 
 
-
+<br>
 Aquamarine (Cyan)
    1. (  5 -   8); 350; 50; Fast attack speed;
    2. ( 11 -  15); 350; 52; Fast attack speed;
@@ -84,7 +84,7 @@ Aquamarine (Cyan)
    6. (279 - 280); 350; 86; Fast attack speed;
 
 
-
+<br>
 Diamond (White)
    1. (  7 -  12);  800;  72; Ground only. Has 25% chance to deal 2x damage;
    2. ( 15 -  18); 1000;  79; Ground only. Has 25% chance to deal 2x damage;
@@ -94,7 +94,7 @@ Diamond (White)
    6. (299 - 350); 1000; 122; Ground only. Has 25% chance to deal 2x damage;
 
 
-
+<br>
 Emerald (Green)
    1. (  3 -   7); 1000;  72; Applies effects for 3s: 15% slow, 2 poison dmg/s;
    2. (  9 -  13); 1000;  79; Applies effects for 4s: 20% slow, 3 poison dmg/s;
@@ -105,7 +105,7 @@ Emerald (Green)
       25 poison dmg/s;
 
 
-
+<br>
 Opal (Dark)
    1. (  4 -   5);  800;  86; Attack speed aura +10%. Effect doesn't stack;
    2. (  9 -  10); 1000; 100; Attack speed aura +15%. Effect doesn't stack;
@@ -115,7 +115,7 @@ Opal (Dark)
    6. (179 - 180); 1000; 215; Attack speed aura +50%. Effect doesn't stack;
 
 
-
+<br>
 Ruby (Red)
    1. (  7 -   9); 1000; 114; Attacks cause splash damage;
    2. ( 12 -  16); 1000; 114; Attacks cause splash damage;
@@ -125,7 +125,7 @@ Ruby (Red)
    6. (139 - 140);  750; 129; Attacks cause splash damage;
 
 
-
+<br>
 Sapphire (Blue)
    1. (  4 -   8); 1000;  72; Attacks slow target's movement speed;
    2. (  9 -  13); 1000; 107; Attacks slow target's movement speed;
@@ -135,7 +135,7 @@ Sapphire (Blue)
    6. (199 - 200); 1000; 286; Attacks slow target's movement speed;
 
 
-
+<br>
 Topaz (Yellow)
    1. (  3 -   4);  800;  72; Attacks 3 targets;
    2. (  7 -   8); 1000;  72; Attacks 3 targets;
@@ -153,14 +153,14 @@ Effect Description.
 Each number corresponds to the tower upgrade level in sequence.
 
 
-
+<br>
 Malachite: (Chipped:Opal + Chipped:Aquamarine + Chipped:Emerald)
    1. ( 5 -  6); 350; 107; 25gp; Attack 3x targets;
    2. (10 - 11); 350; 114; 280gp; Attack 4x targets;
    3. (44 - 45); 350; 114; -----; Attack all targets;
 
 
-
+<br>
 Silver: (Chipped:Topaz + Chipped:Sapphire + Chipped:Diamond)
    1. ( 19 -  21); 1000; 79; 25gp; Silver attacks slow targets with splash area;
    2. ( 39 -  40); 1000; 93; 300gp; Sterling Silver attacks slow targets with 
@@ -169,7 +169,7 @@ Silver: (Chipped:Topaz + Chipped:Sapphire + Chipped:Diamond)
       area;
 
 
-
+<br>
 StarRuby: (Chipped:Amethyst + Chipped:Ruby + Flawed:Ruby)
    1. ( 10 - 11); 250; 38; 30gp; Any enemy within 37.895 range will receive 
       40 dmg/s.
@@ -179,7 +179,7 @@ StarRuby: (Chipped:Amethyst + Chipped:Ruby + Flawed:Ruby)
       100 dmg/s.
 
 
-
+<br>
 PinkDiamond: (Perfect:Diamond + Normal:Diamond + Normal:Topaz)
    1. (149 - 175); 750; 114; 175gp; Attacks ground only. Has 10% chance to
       deal 5x damage. 
@@ -187,7 +187,7 @@ PinkDiamond: (Perfect:Diamond + Normal:Diamond + Normal:Topaz)
       deal 8x damage.
 
 
-
+<br>
 Jade: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
    1. (29 - 35); 500; 114;  45gp; Applies effects for 2s: Slow 50%, 5 poison
       dmg/s.
@@ -198,7 +198,7 @@ Jade: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
       gold on hit.
 
 
-
+<br>
 RedCrystal: (Flawless:Emerald + Normal:Ruby + Flawed:Amethyst)
    1. (49 -  75); 800; 186; 100gp; Gives -4 armour to air units within large 
       area. Can only attack air units.
@@ -208,7 +208,7 @@ RedCrystal: (Flawless:Emerald + Normal:Ruby + Flawed:Amethyst)
       area. Can only attack air units.
 
 
-
+<br>
 Gold: (Perfect:Amethyst + Flawless:Amethyst + Flawed:Diamond)
    1. (159 - 190); 1000; 114; 210gp; 25% chance to deal 2x damage. Applies -5 
       armour to targets it attacks;
@@ -216,7 +216,7 @@ Gold: (Perfect:Amethyst + Flawless:Amethyst + Flawed:Diamond)
       armour to targets it attacks;
 
 
-
+<br>
 ParaibaTourmaline: (Perfect:Aqua + Flawless:Opal + Flawed:Emerald + Flawed:Aqua)
    1. (25 - 105); 850; 112; 350gp; Gives -4 armour to ground units within 86 
       range. Has 33% chance to cast 100 damage frost nova.
@@ -224,7 +224,7 @@ ParaibaTourmaline: (Perfect:Aqua + Flawless:Opal + Flawed:Emerald + Flawed:Aqua)
       range; Has 33% chance to cast 125 damage frost nova.
 
 
-
+<br>
 BlackOpal: (Perfect:Opal + Flawless:Diamond + Normal:Aquamarine)
    1. (24 - 25); 1000; 114; 300gp; Gives 30% more damage to towers within 143 
       range;
@@ -232,7 +232,7 @@ BlackOpal: (Perfect:Opal + Flawless:Diamond + Normal:Aquamarine)
       range;
 
 
-
+<br>
 DarkEmerald: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
    1. (89 - 150); 800; 79; 250gp; Has 12.5% chance to stun for 1 second per 
       attack;
@@ -240,7 +240,7 @@ DarkEmerald: (Perfect:Emerald + Flawless:Sapphire + Flawed:Topaz)
       attack;
 
 
-
+<br>
 Uranium-235: (Perfect:Topaz + Normal:Sapphire + Flawed:Opal)
    1. (47 - 48); 250; 64; 190gp; Slows all targets by 50%. Burn enemies for 190 
       dmg/s.
@@ -248,7 +248,7 @@ Uranium-235: (Perfect:Topaz + Normal:Sapphire + Flawed:Opal)
       dmg/s.
 
 
-
+<br>
 YellowSapphire: (Perfect:Sapphire + Flawless:Topaz + Flawless:Ruby)
    1. (99 - 100); 1000; 114; 210gp; Attacks slow targets within a huge splash
       area.
@@ -256,7 +256,7 @@ YellowSapphire: (Perfect:Sapphire + Flawless:Topaz + Flawless:Ruby)
       area. Provides 5% damage bonus to nearby towers.
 
 
-
+<br>
 BloodStone: (Perfect:Ruby + Flawless:Aquamarine + Normal:Ruby)
    1. ( 67 -  68); 500; 100; 310gp; Attacks 10 targets. Does 135 damage per
       second to nearby enemies and has splash damage.
@@ -266,7 +266,7 @@ BloodStone: (Perfect:Ruby + Flawless:Aquamarine + Normal:Ruby)
    what the script does, at least).
 
 
-
+<br>
 UberStone: 4x Perfect Gems of same type
    1. (500 - 2500); 500; 215; -----; Has 25% chance to deal 4x damage. Only the 
    very luck have the chance ever to this stone of pure damage.
@@ -281,18 +281,18 @@ Enemies rewards start at 1.25gp, and at each wave, the reward increases by
 +0.25gp.
 
 
-
+<br>
 Information below was extracted from the game's source code. 
 It was too complex to make it by experimentation.
 
 
-
+<br>
 For better reading, either resize the page to contain the full info, or, copy
 and paste the entire text into a text-editor of preference (ftlog, not Word).
 Disable wrap mode. Have fun.
 
 
-
+<br>
 Enemy Status (All Difficulty Modes):
    1.  Axedwarf; Topaz;         10 hp;  0 armour; 100.00% speed;  1.25 gold; 
    2.  Axedwarf; Aquamarine;    30 hp;  0 armour; 100.00% speed;  1.50 gold; 
@@ -346,7 +346,7 @@ Enemy Status (All Difficulty Modes):
    50. Axedwarf; Emerald;    40000 hp; 15 armour; 150.94% speed; 20.00 gold;
 
 
-
+<br>
 Extreme Difficulty Changes:
    1. (Just to make a list. Markdown requires to insert 1.)
    11. Axedwarf;   600 hp;
@@ -381,7 +381,7 @@ Extreme Difficulty Changes:
    40. Batman;             128.30% speed;  83.02% min-speed; for some reason, this wave is easier on this difficulty.
 
 
-
+<br>
 Survival Difficulty Changes:
    1. (Just to make a list. Markdown requires to insert 1.)
    11. Axedwarf;   650 hp;
@@ -417,8 +417,8 @@ Survival Difficulty Changes:
    - Waves 41+:
       - Enemies have 45000 base hp. At each wave starting from 41 onwards, they increase the hp by 10%.
          - So, on wave 41, they get 110% x 45000 hp = 49500.
-         -     on wave 42, they get 120% x 45000 hp = 54000.
-         -     on wave 50, they get 200% x 45000 hp = 90000.
+         - on wave 42, they get 120% x 45000 hp = 54000.
+         - on wave 50, they get 200% x 45000 hp = 90000.
          - and so on...
       - At each 4th wave (flying wave), their max hp decreases to 1/3.
       - At each 50th wave, enemies are immune to stun.
@@ -435,14 +435,14 @@ I mean, this is not written anywhere afaik, besides by carefully reading the
 source code. So, I'll document it here.
 
 
-
+<br>
 How RNG works?
    - Read about `xorshift`. I did had my doubts about this... Yes, some of you 
      might be cheating with this one! Just set a known seed and voila! Its not
      random anymore.
 
 
-
+<br>
 How Armor and Damage calculation actually works?
    - First, the game ONLY IMPLEMENTS AMETHYST weakness. Yes, its described that 
      certain mobs have Sapphire weakness, or Ruby, but they don't. It's only 
@@ -475,7 +475,7 @@ How Armor and Damage calculation actually works?
       - `(BaseDamage x {WeaknessModifier} x {ArmorModifier} x {TowerLevel}) x {AuraDamageModifier} x {CritDamageModifier}.`
 
 
-
+<br>
 What are the gem-types of each tower, to counter enemies weaknesses?
    - Gold:                   Amethyst    <-- end game towers
    - EgyptianGold:           Amethyst    <-- end game towers
