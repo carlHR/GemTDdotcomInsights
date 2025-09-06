@@ -165,9 +165,9 @@ Each number corresponds to the tower upgrade level in sequence.
 <br>
 
 Malachite: (Chipped:Opal + Chipped:Aquamarine + Chipped:Emerald)
-   1. ( 5 -  6); 350; 107; 25gp; Attack 3x targets;
-   2. (10 - 11); 350; 114; 280gp; Attack 4x targets;
-   3. (44 - 45); 350; 114; -----; Attack all targets;
+   1. ( 5 -  6); 350; 107; 25gp; Attacks 3 targets;
+   2. (10 - 11); 350; 114; 280gp; Attacks 4 targets;
+   3. (44 - 45); 350; 114; -----; Attacks 10 targets;
 
 
 <br>
@@ -540,3 +540,109 @@ What are the gem-types of each tower, to counter enemies weaknesses?
    - SilverKnight:           Sapphire
    - Uranium235:             Topaz
    - Uranium238:             Topaz
+
+--------------------------------------------------------------------------------
+# Displaying Custom Grid & Map Template through "Javascript Injection" on the page
+
+I created this function below.
+It'll display a faint and customizable grid over the game map. 
+
+No more guessing where you'll be able to place gems/rocks!
+
+How to use it:
+   1. Open the browser console
+   2. Copy the snippet below.
+   3. Paste it on the browser console.
+   4. Press Enter. Have fun!
+
+If you know CSS, I've placed an input letting you control how the grid is displayed.
+Just hit Apply Style, and it'll update the grid instantly after.
+
+I tested this on Firefox. If you use another browser, and run into troubles or bugs, just let me know! If your browser is too old, it might not work.
+
+I added a file chooser in case you want to edit a grid for yourself, in order to add a map template, just in case. Currently, I only made support for PNG formats, but if you edit the code below, you can apply other file formats. The file Grid.png on my github page is the one used to display the default grid.
+
+```
+function applyGrid() {
+   let canvas = document.getElementsByTagName('canvas')[0];
+   let inner = document.createElement('div');
+   let outer = document.createElement('div');
+   let image = document.createElement('img');
+   let style = document.createElement('style');
+   let fileChooser = document.createElement('input');
+   let styleInput = document.createElement('input');
+   let applyButton = document.createElement('input');
+
+   // Use this site to get any grid color of choice:
+   // https://angel-rs.github.io/css-color-filter-generator/
+
+
+   // Image Overlay Source:
+   // https://stackoverflow.com/a/14843923/14956120
+   style.innerHTML = `
+.outer{ 
+    width:705px; height:504px; 
+}
+.inner{ 
+    width:100%; height:100%; 
+    position:relative;
+}
+.cover{ 
+    width:100%; height:100%; 
+    position:absolute; top:0px; left:0px;
+}
+.image{
+   pointer-events: none; top: 20px;
+   min-width: 520px; min-height: 520px;
+   max-width: 520px; max-height: 520px;
+`;
+
+   inner.className = 'inner';
+   outer.className = 'outer';
+   image.className = 'cover image';
+   canvas.className += ' cover';
+
+   document.head.appendChild(style);
+
+   image.src = 'data:image/png;base64,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';
+   image.setAttribute('style', 'filter: brightness(0) saturate(100%) invert(26%) sepia(29%) saturate(3247%) hue-rotate(271deg) brightness(106%) contrast(101%); opacity: 0.2;');
+   styleInput.value = 'filter: brightness(0) saturate(100%) invert(26%) sepia(29%) saturate(3247%) hue-rotate(271deg) brightness(106%) contrast(101%); opacity: 0.2;';
+   applyButton.type = 'button';
+   applyButton.value = 'Apply Style';
+
+   // Reading files content from html, if necessary
+   // https://stackoverflow.com/a/64113219/14956120
+   fileChooser.type = 'file';
+   fileChooser.onchange = async function (event) {
+      const file = event.target.files.item(0);
+      let text = await file.bytes();
+      image.src = 'data:image/png;base64,' + text.toBase64();
+      image.setAttribute('style', styleInput.value);
+   };
+
+   applyButton.onclick = function () {
+      image.setAttribute('style', styleInput.value);
+   }
+
+   canvas.parentNode.parentNode.appendChild(document.createElement('br'));
+   canvas.parentNode.parentNode.appendChild(fileChooser);
+   canvas.parentNode.parentNode.appendChild(document.createElement('br'));
+   canvas.parentNode.parentNode.appendChild(document.createTextNode('To change grid color using filters:'));
+   canvas.parentNode.parentNode.appendChild(document.createElement('br'));
+   canvas.parentNode.parentNode.appendChild(document.createTextNode('https://angel-rs.github.io/css-color-filter-generator/'))
+   canvas.parentNode.parentNode.appendChild(document.createElement('br'));
+   canvas.parentNode.parentNode.appendChild(styleInput);
+   canvas.parentNode.parentNode.appendChild(applyButton);
+
+   canvas.parentNode.appendChild(outer);
+   canvas.parentNode.removeChild(canvas);
+
+   outer.setAttribute('style', 'min-width: 705px; min-height: 540px;');
+
+   outer.appendChild(inner);
+   inner.appendChild(canvas);
+   inner.appendChild(image);
+}
+
+applyGrid();
+```
