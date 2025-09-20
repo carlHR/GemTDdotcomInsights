@@ -572,6 +572,7 @@ function applyGrid() {
    let fileChooser = document.createElement('input');
    let styleInput = document.createElement('input');
    let applyButton = document.createElement('input');
+   let toggleButton = document.createElement('input');
 
    // Use this site to get any grid color of choice:
    // https://angel-rs.github.io/css-color-filter-generator/
@@ -609,6 +610,9 @@ function applyGrid() {
    styleInput.value = 'filter: brightness(0) saturate(100%) invert(26%) sepia(29%) saturate(3247%) hue-rotate(271deg) brightness(106%) contrast(101%); opacity: 0.2;';
    applyButton.type = 'button';
    applyButton.value = 'Apply Style';
+   toggleButton.type = 'checkbox';
+   toggleButton.value = 'Show Grid';
+   toggleButton.checked = true;
 
    // Reading files content from html, if necessary
    // https://stackoverflow.com/a/64113219/14956120
@@ -624,8 +628,17 @@ function applyGrid() {
       image.setAttribute('style', styleInput.value);
    }
 
+   toggleButton.onchange = function (event) {
+      if (toggleButton.checked) {
+         image.style.display = 'block';
+      } else {
+         image.style.display = 'none';
+      }
+   }
+
    canvas.parentNode.parentNode.appendChild(document.createElement('br'));
    canvas.parentNode.parentNode.appendChild(fileChooser);
+   canvas.parentNode.parentNode.appendChild(toggleButton);
    canvas.parentNode.parentNode.appendChild(document.createElement('br'));
    canvas.parentNode.parentNode.appendChild(document.createTextNode('To change grid color using filters:'));
    canvas.parentNode.parentNode.appendChild(document.createElement('br'));
