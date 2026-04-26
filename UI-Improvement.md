@@ -600,6 +600,7 @@ function CustomUI() {
    let opacityOutput = TextBlock('(100%)');
    let useColorFilter = document.createElement('input');
    let restoreTemplate = document.createElement('input');
+   let submitScore = document.createElement('input');
 
    function restoreImageTemplate() {
       fileChooser.value = null;
@@ -629,6 +630,8 @@ function CustomUI() {
    useColorFilter.checked = true;
    restoreTemplate.type = 'button';
    restoreTemplate.value = 'Reset Template';
+   submitScore.type = 'button';
+   submitScore.value = 'Show Inputs';
 
    restoreImageTemplate();
 
@@ -671,8 +674,24 @@ function CustomUI() {
       restoreImageTemplate();
    }
 
+   submitScore.onclick = function (event) {
+      let email;
+      let username;
+      try {
+         username = document.getElementById('username');
+         if (username != null) {
+            inner.appendChild(username.parentNode);
+         }
+         email = document.getElementById('email');
+         if (email != null) {
+            inner.appendChild(email.parentNode);
+         }
+      } catch (err) {
+         console.warn(err);
+      }
+   }
+
    let hbox;
-   let vbox;
    let submenu;
 
    hbox = HBox();
@@ -685,6 +704,8 @@ function CustomUI() {
 
    menu.appendChild(Title('Map Template:'))
    submenu = VBox('menu');
+   submenu.appendChild(HBoxContent(TextBlock(' - submit score: '), Space4(), submitScore, Stretch()));
+   submenu.appendChild(Space4());
    submenu.appendChild(HBoxContent(TextBlock(' - template: '), Space4(), fileChooser, Stretch()));
    submenu.appendChild(Space4());
    submenu.appendChild(HBoxContent(TextBlock(' - color: '), Space4(), colorPicker, Stretch()));
@@ -696,20 +717,16 @@ function CustomUI() {
    submenu.appendChild(HBoxContent(TextBlock(' - visibility: '), Space4(), toggleButton, Stretch()));
    submenu.appendChild(Space4());
    submenu.appendChild(HBoxContent(restoreTemplate, Stretch()));
-   submenu.appendChild(Space4());
    menu.appendChild(submenu);
    menu.appendChild(Space8());
 
    canvas.parentNode.appendChild(outer);
    canvas.parentNode.removeChild(canvas);
-
    outer.setAttribute('style', 'min-width: 705px; min-height: 540px;');
-
    outer.appendChild(inner);
    inner.appendChild(canvas);
    inner.appendChild(image);
 }
 
 CustomUI();
-
 ```
