@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	max-width: 100%;
+	min-height: 100%;
+}
+
+body {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	font-family: Tahoma;
+}
+
+.vbox {
+	display: flex;
+	flex-direction: column;
+}
+
+.hbox {
+	display: flex;
+	flex-direction: row;
+}
+
+.stretch, .stretch1 {
+	display: flex;
+	flex: 1;
+}
+
+.stretch2 {
+	display: flex;
+	flex: 2;
+}
+
+.stretch3 {
+	display: flex;
+	flex: 3;
+}
+
+.stretch4 {
+	display: flex;
+	flex: 4;
+}
+
+.stretch5 {
+	display: flex;
+	flex: 5;
+}
+
+.stretch6 {
+	display: flex;
+	flex: 6;
+}
+
+.stretch7 {
+	display: flex;
+	flex: 7;
+}
+
+.stretch8 {
+	display: flex;
+	flex: 8;
+}
+
+.space1 {
+	min-width: 1px;
+	max-width: 1px;
+	min-height: 1px;
+	max-height: 1px;
+}
+
+.space2 {
+	min-width: 2px;
+	max-width: 2px;
+	min-height: 2px;
+	max-height: 2px;
+}
+
+.space4 {
+	min-width: 4px;
+	max-width: 4px;
+	min-height: 4px;
+	max-height: 4px;
+}
+
+.space8 {
+	min-width: 8px;
+	max-width: 8px;
+	min-height: 8px;
+	max-height: 8px;
+}
+
+.space16 {
+	min-width: 16px;
+	max-width: 16px;
+	min-height: 16px;
+	max-height: 16px;
+}
+
+.space32 {
+	min-width: 32px;
+	max-width: 32px;
+	min-height: 32px;
+	max-height: 32px;
+}
+
+.space64 {
+	min-width: 64px;
+	max-width: 64px;
+	min-height: 64px;
+	max-height: 64px;
+}
+
+.space128 {
+	min-width: 128px;
+	max-width: 128px;
+	min-height: 128px;
+	max-height: 128px;
+}
+
+.vspace1 {
+	min-height: 1px;
+	max-height: 1px;
+}
+
+.vspace2 {
+	min-height: 2px;
+	max-height: 2px;
+}
+
+.vspace4 {
+	min-height: 4px;
+	max-height: 4px;
+}
+
+.vspace8 {
+	min-height: 8px;
+	max-height: 8px;
+}
+
+.vspace16 {
+	min-height: 16px;
+	max-height: 16px;
+}
+
+.vspace32 {
+	min-height: 32px;
+	max-height: 32px;
+}
+
+.vspace64 {
+	min-height: 64px;
+	max-height: 64px;
+}
+
+.vspace128 {
+	min-height: 128px;
+	max-height: 128px;
+}
+
+.hspace1 {
+	min-height: 1px;
+	max-height: 1px;
+}
+
+.hspace2 {
+	min-width: 2px;
+	max-width: 2px;
+}
+
+.hspace4 {
+	min-width: 4px;
+	max-width: 4px;
+}
+
+.hspace8 {
+	min-width: 8px;
+	max-width: 8px;
+}
+
+.hspace16 {
+	min-width: 16px;
+	max-width: 16px;
+}
+
+.hspace32 {
+	min-width: 32px;
+	max-width: 32px;
+}
+
+.hspace64 {
+	min-width: 64px;
+	max-width: 64px;
+}
+
+.hspace128 {
+	min-width: 128px;
+	max-width: 128px;
+}
+
+.rotate90 {
+	transform: rotate(90deg);
+}
+
+.rotate180 {
+	transform: rotate(180deg);
+}
+
+.rotate270 {
+	transform: rotate(270deg);
+}
+
+.output-label {
+	color: dimgray;
+	background-color: white;
+	border: 1px solid silver;
+	border-radius: 4px;
+	padding: 2px;
+}
+
+.fixed-width100 {
+	min-width: 100px;
+	max-width: 100px;
+}
+
+.fixed-width150 {
+	min-width: 150px;
+	max-width: 150px;
+}
+
+.tool-button {
+	width: 24px;
+	height: 24px;
+	border: 1px solid silver;
+	border-radius: 4px;
+	background-color: #bbb;
+}
+
+.tool-button:hover {
+	background-color: #ccc;
+}
+
+.tool-button:active {
+	background-color: #999;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+img {
+	width: calc(26px * 1.33);
+	height: calc(26px * 1.33);
+	image-rendering: pixelated;
+}
+
+.gem-larger {
+	width: calc(26px * 2);
+	height: calc(26px * 2);
+	image-rendering: pixelated;
+}
+
+.recipe-name {
+	font-weight: bold;
+	min-width: 150px;
+	text-align: right;
+}
+
+	</style>
+</head>
+<body>
+
+	<!--  URLs
+		https://www.gemtowerdefense.com/assets/normalamethyst.png
+		https://www.gemtowerdefense.com/assets/normalaquamarine.png
+		https://www.gemtowerdefense.com/assets/normaldiamond.png
+		https://www.gemtowerdefense.com/assets/normalemerald.png
+		https://www.gemtowerdefense.com/assets/normalopal.png
+		https://www.gemtowerdefense.com/assets/normalruby.png
+		https://www.gemtowerdefense.com/assets/normalsapphire.png
+		https://www.gemtowerdefense.com/assets/normaltopaz.png
+	
+		https://www.gemtowerdefense.com/assets/flawedamethyst.png
+		https://www.gemtowerdefense.com/assets/flawedaquamarine.png
+		https://www.gemtowerdefense.com/assets/flaweddiamond.png
+		https://www.gemtowerdefense.com/assets/flawedemerald.png
+		https://www.gemtowerdefense.com/assets/flawedopal.png
+		https://www.gemtowerdefense.com/assets/flawedruby.png
+		https://www.gemtowerdefense.com/assets/flawedsapphire.png
+		https://www.gemtowerdefense.com/assets/flawedtopaz.png
+		
+		https://www.gemtowerdefense.com/assets/airslate.png
+		https://www.gemtowerdefense.com/assets/ancientslate.png
+		https://www.gemtowerdefense.com/assets/damageslate.png
+		https://www.gemtowerdefense.com/assets/elderslate.png
+		https://www.gemtowerdefense.com/assets/holdslate.png
+		https://www.gemtowerdefense.com/assets/opalveinslate.png
+		https://www.gemtowerdefense.com/assets/poisonslate.png
+		https://www.gemtowerdefense.com/assets/rangeslate.png
+		https://www.gemtowerdefense.com/assets/slowslate.png
+		https://www.gemtowerdefense.com/assets/spellslate.png
+		https://www.gemtowerdefense.com/assets/viperslate.png
+		https://www.gemtowerdefense.com/assets/wraithslate.png
+	-->
+
+	<div class="space8"></div>
+	<div style="font-weight: bold; font-size: larger; padding-left: 8px;">Base Slate Recipes:</div>
+	<div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Hold:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Hold" class="gem-larger" src="https://www.gemtowerdefense.com/assets/holdslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Topaz" src="https://www.gemtowerdefense.com/assets/normaltopaz.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Amethyst" src="https://www.gemtowerdefense.com/assets/flawedamethyst.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Sapphire" src="https://www.gemtowerdefense.com/assets/flawedsapphire.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Air:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Air" class="gem-larger" src="https://www.gemtowerdefense.com/assets/airslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Amethyst" src="https://www.gemtowerdefense.com/assets/normalamethyst.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Emerald" src="https://www.gemtowerdefense.com/assets/flawedemerald.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Opal" src="https://www.gemtowerdefense.com/assets/flawedopal.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Ruby" src="https://www.gemtowerdefense.com/assets/flawedruby.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Opal Vein:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Opal Vein" class="gem-larger" src="https://www.gemtowerdefense.com/assets/opalveinslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Opal" src="https://www.gemtowerdefense.com/assets/normalopal.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Ruby" src="https://www.gemtowerdefense.com/assets/flawedruby.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Topaz" src="https://www.gemtowerdefense.com/assets/flawedtopaz.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Slow:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Slow" class="gem-larger" src="https://www.gemtowerdefense.com/assets/slowslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Sapphire" src="https://www.gemtowerdefense.com/assets/normalsapphire.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Aquamarine" src="https://www.gemtowerdefense.com/assets/flawedaquamarine.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Diamond" src="https://www.gemtowerdefense.com/assets/flaweddiamond.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Emerald" src="https://www.gemtowerdefense.com/assets/flawedemerald.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Spell:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Spell" class="gem-larger" src="https://www.gemtowerdefense.com/assets/spellslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Aquamarine" src="https://www.gemtowerdefense.com/assets/normalaquamarine.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Amethyst" src="https://www.gemtowerdefense.com/assets/flawedamethyst.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Diamond" src="https://www.gemtowerdefense.com/assets/flaweddiamond.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Poison:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Poison" class="gem-larger" src="https://www.gemtowerdefense.com/assets/poisonslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Emerald" src="https://www.gemtowerdefense.com/assets/normalemerald.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Aquamarine" src="https://www.gemtowerdefense.com/assets/flawedaquamarine.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Opal" src="https://www.gemtowerdefense.com/assets/flawedopal.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Topaz" src="https://www.gemtowerdefense.com/assets/flawedtopaz.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Damage:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Damage" class="gem-larger" src="https://www.gemtowerdefense.com/assets/damageslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Diamond" src="https://www.gemtowerdefense.com/assets/normaldiamond.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Opal" src="https://www.gemtowerdefense.com/assets/flawedopal.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Sapphire" src="https://www.gemtowerdefense.com/assets/flawedsapphire.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Range:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Range" class="gem-larger" src="https://www.gemtowerdefense.com/assets/rangeslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Normal Ruby" src="https://www.gemtowerdefense.com/assets/normalruby.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="hbox">
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Amethyst" src="https://www.gemtowerdefense.com/assets/flawedamethyst.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Ruby" src="https://www.gemtowerdefense.com/assets/flawedruby.png">
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        |
+                        <div class="stretch"></div>
+                    </div>
+
+                    <div class="space8"></div>
+
+                    <div class="vbox">
+                        <div class="stretch"></div>
+                        <img title="Flawed Topaz" src="https://www.gemtowerdefense.com/assets/flawedtopaz.png">
+                        <div class="stretch"></div>
+                    </div>
+                </div>
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="space8"></div>
+	<div style="font-weight: bold; font-size: larger; padding-left: 8px;">Combination Slate Recipes:</div>
+	<div class="space8"></div>
+
+	<div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Ancient:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Ancient" class="gem-larger" src="https://www.gemtowerdefense.com/assets/ancientslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Hold" class="gem-larger" src="https://www.gemtowerdefense.com/assets/holdslate.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Air" class="gem-larger" src="https://www.gemtowerdefense.com/assets/airslate.png">
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Wraith:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Wraith" class="gem-larger" src="https://www.gemtowerdefense.com/assets/wraithslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Opal Vein" class="gem-larger" src="https://www.gemtowerdefense.com/assets/opalveinslate.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Slow" class="gem-larger" src="https://www.gemtowerdefense.com/assets/slowslate.png">
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Elder:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Elder" class="gem-larger" src="https://www.gemtowerdefense.com/assets/elderslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Spell" class="gem-larger" src="https://www.gemtowerdefense.com/assets/spellslate.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Poison" class="gem-larger" src="https://www.gemtowerdefense.com/assets/poisonslate.png">
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+    <div class="vbox">
+        <div class="stretch"></div>
+        <div class="hbox">
+            <div class="vbox">
+                <div class="stretch"></div>
+                <div class="recipe-name">Viper:</div>
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+            <div class="vbox">
+                <img title="Viper" class="gem-larger" src="https://www.gemtowerdefense.com/assets/viperslate.png">
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                =
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Damage" class="gem-larger" src="https://www.gemtowerdefense.com/assets/damageslate.png">
+                <div class="stretch"></div>
+            </div>
+
+            <div class="space8"></div>
+            <div class="vbox">
+                <div class="stretch"></div>
+                +
+                <div class="stretch"></div>
+            </div>
+            <div class="space8"></div>
+
+            <div class="vbox">
+                <div class="stretch"></div>
+                <img title="Range" class="gem-larger" src="https://www.gemtowerdefense.com/assets/rangeslate.png">
+                <div class="stretch"></div>
+            </div>
+        </div>
+        <div class="stretch"></div>
+    </div>
+    <div class="space8"></div>
+
+</body>
+</html>
